@@ -1645,7 +1645,7 @@ checksum = "0206175f82b8d6bf6652ff7d71a1e27fd2e4efde587fd368662814d6ec1d9ce0"
 [[package]]
 name = "farms"
 version = "0.1.0"
-source = "git+https://github.com/Kamino-Finance/kfarms.git#f25c341e161acbae8a310501c55b1a0d9bc8f9c8"
+source = "git+https://github.com/harsh4786/kfarms.git#dcc5b881389f34ffe0a14cf9c122d3ccbe6773c2"
 dependencies = [
  "anchor-lang",
  "anchor-spl",
@@ -1654,7 +1654,7 @@ dependencies = [
  "num-derive 0.3.3",
  "num-traits",
  "num_enum 0.5.11",
- "scope-types 1.0.0 (git+https://github.com/hubbleprotocol/scope?branch=anchor_0.29)",
+ "scope-types",
  "solana-security-txt",
  "spl-token 4.0.0",
  "static_assertions",
@@ -2339,7 +2339,7 @@ dependencies = [
  "fixed-macro",
  "num_enum 0.7.1",
  "pyth-sdk-solana",
- "scope-types 1.0.0 (git+https://github.com/Kamino-Finance/scope.git?branch=anchor_0.29_idl)",
+ "scope-types",
  "serde",
  "solana-program",
  "solana-program-test",
@@ -3691,18 +3691,6 @@ dependencies = [
  "quote",
  "serde_derive_internals",
  "syn 1.0.109",
-]
-
-[[package]]
-name = "scope-types"
-version = "1.0.0"
-source = "git+https://github.com/hubbleprotocol/scope?branch=anchor_0.29#f997739206b20ebf6b8f5f9c247c7c2fdda49961"
-dependencies = [
- "anchor-lang",
- "bytemuck",
- "cfg-if",
- "num_enum 0.7.1",
- "solana-program",
 ]
 
 [[package]]
