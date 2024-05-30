@@ -1,5 +1,5 @@
 use anchor_lang::prelude::*;
-use borsh::{BorshDeserialize, BorshSerialize};
+use borsh_new::{BorshDeserialize, BorshSerialize};
 use derivative::Derivative;
 
 #[cfg(feature = "serde")]

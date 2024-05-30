@@ -2,7 +2,7 @@ use std::cmp::Ordering;
 
 use anchor_lang::{prelude::*, solana_program::clock::Slot, Result};
 use bitflags::bitflags;
-use borsh::{BorshDeserialize, BorshSerialize};
+use borsh_new::{BorshDeserialize, BorshSerialize};
 
 use crate::LendingError;
 

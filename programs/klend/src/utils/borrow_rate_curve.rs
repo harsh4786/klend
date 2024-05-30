@@ -1,5 +1,5 @@
 use anchor_lang::prelude::*;
-use borsh::{BorshDeserialize, BorshSerialize};
+use borsh_new::{BorshDeserialize, BorshSerialize};
 
 use super::{FractionExtra, FULL_BPS};
 use crate::{utils::Fraction, LendingError};

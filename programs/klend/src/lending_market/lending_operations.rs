@@ -11,7 +11,7 @@ use anchor_lang::{
     solana_program::clock::Slot,
     Result,
 };
-use borsh::BorshDeserialize;
+use borsh_new::BorshDeserialize;
 use solana_program::clock::{self, Clock};
 
 use self::utils::{

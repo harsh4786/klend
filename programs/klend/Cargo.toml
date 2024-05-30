@@ -19,7 +19,6 @@ cpi = ["no-entrypoint"]
 default = []
 serde = ["dep:serde", "fixed/serde-str"]
 staging = []
-idl-build = ["anchor-lang/idl-build", "anchor-spl/idl-build"]
 
 [dependencies]
 anchor-lang.workspace = true
@@ -29,7 +28,7 @@ solana-security-txt = "1.1.1"
 
 # Override anchor to use borsh with the const-generics feature
 # Allows to borsh serialize arrays of any length
-borsh.workspace = true
+borsh-new = { package = "borsh", version = "0.10.3", features = ["const-generics"] }
 bytemuck.workspace = true
 
 switchboard-itf = { git = "https://github.com/Kamino-Finance/scope.git", branch = "anchor_0.29_idl", features = [
@@ -61,11 +60,8 @@ uint = "0.9.5"
 serde = { workspace = true, optional = true }
 
 # Test dependencies
-solana-program-test = { workspace = true, optional = true }
 spl-associated-token-account = { workspace = true, optional = true }
-solana-sdk = { workspace = true, optional = true, features = [
-    "dev-context-only-utils",
-] }
+solana-sdk = { workspace = true, optional = true }
 arrayref = { version = "0.3.6", optional = true }
 bitflags = "2.4.1"
 

@@ -9,7 +9,7 @@ use anchor_lang::{
     solana_program::clock::Slot,
     Result,
 };
-use borsh::{BorshDeserialize, BorshSerialize};
+use borsh_new::{BorshDeserialize, BorshSerialize};
 use derivative::Derivative;
 use num_enum::{IntoPrimitive, TryFromPrimitive};
 #[cfg(feature = "serde")]

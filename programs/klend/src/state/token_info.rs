@@ -1,7 +1,7 @@
 use std::fmt::Formatter;
 
 use anchor_lang::prelude::*;
-use borsh::{BorshDeserialize, BorshSerialize};
+use borsh_new::{BorshDeserialize, BorshSerialize};
 #[cfg(feature = "serde")]
 use serde;
 
