@@ -14,7 +14,7 @@ use crate::{
 
 static_assertions::const_assert_eq!(OBLIGATION_SIZE, std::mem::size_of::<Obligation>());
 static_assertions::const_assert_eq!(0, std::mem::size_of::<Obligation>() % 8);
-#[derive(PartialEq, Derivative)]
+#[derive(PartialEq, Derivative, AnchorDeserialize, AnchorSerialize)]
 #[derivative(Debug)]
 #[account(zero_copy)]
 #[repr(C)]
@@ -382,7 +382,7 @@ pub struct InitObligationArgs {
     pub id: u8,
 }
 
-#[derive(Debug, Default, PartialEq, Eq)]
+#[derive(Debug, Default, PartialEq, Eq, AnchorDeserialize, AnchorSerialize)]
 #[zero_copy]
 #[repr(C)]
 pub struct ObligationCollateral {
@@ -419,7 +419,7 @@ impl ObligationCollateral {
     }
 }
 
-#[derive(Debug, Default, PartialEq, Eq)]
+#[derive(Debug, Default, PartialEq, Eq, AnchorDeserialize, AnchorSerialize)]
 #[zero_copy]
 #[repr(C)]
 pub struct ObligationLiquidity {

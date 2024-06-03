@@ -25,7 +25,7 @@ use crate::{
     CalculateBorrowResult, CalculateRepayResult, LendingError, LendingResult, ReferrerTokenState,
 };
 
-#[derive(Default, Debug, PartialEq, Eq)]
+#[derive(Default, Debug, PartialEq, Eq, AnchorDeserialize, AnchorSerialize)]
 #[zero_copy]
 #[repr(C)]
 pub struct BigFractionBytes {
@@ -50,7 +50,7 @@ impl From<BigFractionBytes> for BigFraction {
 
 static_assertions::const_assert_eq!(RESERVE_SIZE, std::mem::size_of::<Reserve>());
 static_assertions::const_assert_eq!(0, std::mem::size_of::<Reserve>() % 8);
-#[derive(PartialEq, Derivative)]
+#[derive(PartialEq, Derivative, AnchorDeserialize, AnchorSerialize)]
 #[derivative(Debug)]
 #[account(zero_copy)]
 #[repr(C)]
@@ -355,7 +355,7 @@ pub struct InitReserveParams {
     pub config: Box<ReserveConfig>,
 }
 
-#[derive(Debug, PartialEq, Eq)]
+#[derive(Debug, PartialEq, Eq, AnchorDeserialize, AnchorSerialize)]
 #[zero_copy]
 #[repr(C)]
 pub struct ReserveLiquidity {
@@ -616,7 +616,7 @@ pub struct NewReserveLiquidityParams {
     pub market_price_sf: u128,
 }
 
-#[derive(Debug, Default, PartialEq, Eq)]
+#[derive(Debug, Default, PartialEq, Eq, AnchorDeserialize, AnchorSerialize)]
 #[zero_copy]
 #[repr(C)]
 pub struct ReserveCollateral {
