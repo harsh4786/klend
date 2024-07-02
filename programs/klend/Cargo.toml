@@ -29,7 +29,7 @@ solana-security-txt = "1.1.1"
 
 # Override anchor to use borsh with the const-generics feature
 # Allows to borsh serialize arrays of any length
-borsh.workspace = true
+borsh-new = { package = "borsh", version = "0.10.3", features = ["const-generics"] }
 bytemuck.workspace = true
 
 switchboard-itf = { git = "https://github.com/Kamino-Finance/scope.git", branch = "anchor_0.29_idl", features = [
