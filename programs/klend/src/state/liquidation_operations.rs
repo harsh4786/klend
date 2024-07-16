@@ -170,19 +170,19 @@ pub fn get_liquidation_params(
         );
         Ok(params)
     } 
-    // else if let Some(params) = check_autodeleverage_obligation(
-    //     lending_market,
-    //     collateral_reserve,
-    //     debt_reserve,
-    //     obligation,
-    //     slot,
-    // ) {
-    //     xmsg!(
-    //         "Obligation is eligible for auto-deleveraging liquidation with liquidation bonus: {}bps",
-    //         params.liquidation_bonus_rate.to_bps::<u64>().unwrap()
-    //     );
-    //     Ok(params)
-    // } 
+    else if let Some(params) = check_autodeleverage_obligation(
+        lending_market,
+        collateral_reserve,
+        debt_reserve,
+        obligation,
+        slot,
+    ) {
+        xmsg!(
+            "Obligation is eligible for auto-deleveraging liquidation with liquidation bonus: {}bps",
+            params.liquidation_bonus_rate.to_bps::<u64>().unwrap()
+        );
+        Ok(params)
+    } 
     else {
         xmsg!(
             "Obligation is healthy and cannot be liquidated, LTV: {}",
